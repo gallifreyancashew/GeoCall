@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_1"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="323dp"
+            android:layout_height="129dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/geocall_embossedtxt" />
+
+        <EditText
+            android:id="@+id/gc-Username"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0"
+            android:background="@drawable/radius_white"
+            android:padding="8dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:textSize="18sp"
+            android:hint="Email or Username"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#808080" />
+
+        <EditText
+            android:id="@+id/gc-Password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0"
+            android:background="@drawable/radius_white"
+            android:padding="8dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:textSize="18sp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="#808080" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="60dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:text="@string/forgotPassword"
+            android:textColor="@color/goldLeaf"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_gold"
+            android:fontFamily="@font/modecotrial_regular"
+            android:text="Login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:text="@string/NewUser"
+            android:textColor="@color/goldLeaf"
+            android:textIsSelectable="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/modecotrial_bold"
+            android:text="or sign in with"
+            android:textColor="@color/goldLeaf"
+            android:textSize="18sp" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/facebook"
+                android:clickable="true"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/google"
+                android:clickable="true"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/whatsapp"
+                android:clickable="true"/>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
