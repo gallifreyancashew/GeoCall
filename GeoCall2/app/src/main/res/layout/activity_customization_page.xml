@@ -12,14 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
         android:orientation="vertical">
 
         <ImageView
             android:layout_width="300dp"
             android:layout_height="98dp"
             android:layout_gravity="center"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="90dp"
             android:src="@drawable/geocall_embossedtxt" />
         <TextView
             android:layout_width="wrap_content"
@@ -33,17 +32,49 @@
 
         <RadioGroup
             android:layout_width="200dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center">
+
             <RadioButton
                 android:id="@+id/defaultsetting"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="@string/defaultDesc"
-                android:textColor="@color/goldLeaf"
-                android:textSize="20dp"
-                android:fontFamily="@font/modecotrial_bold"/>
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:fontFamily="@font/modecotrial_regular"/>
+            <RadioButton
+                android:id="@+id/advancedsetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/advDesc"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:fontFamily="@font/modecotrial_regular"/>
+        </>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:textColor="@color/hintGray"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:text="Don't worry about your choice, \nyou can change these settings later on."/>
 
-        />
-
+        <!--this should lead to the Welcome page-->
+        <Button
+            android:id="@+id/ready_button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/radius_gold"
+            android:fontFamily="@font/modecotrial_regular"
+            android:text="I'm ready" />
+    </>
 </LinearLayout>

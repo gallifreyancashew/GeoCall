@@ -10,6 +10,9 @@
     android:gravity="center"
     tools:context=".MainActivity" >
 
+    <!--SPLASH SCREEN
+        swipe in any direction to head to the LOGIN PAGE-->
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
