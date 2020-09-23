@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/bg_1"
+    android:orientation="vertical"
+    tools:context=".TermsAndConditions">
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="98dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/geocall_embossedtxt">
+    </>
+    s
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="520dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/termsandconditions"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:textColor="#FFFFFF">
+        </>
+    </>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:background="@drawable/radius_gold"
+        android:fontFamily="@font/modecotrial_regular"
+        android:text="@string/agree" />
+</LinearLayout>

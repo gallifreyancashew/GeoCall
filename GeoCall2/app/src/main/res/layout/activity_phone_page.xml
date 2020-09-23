@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_1"
+    android:textAlignment="center"
     tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
 
         <ImageView
@@ -21,54 +22,49 @@
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:src="@drawable/geocall_embossedtxt" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/modecotrial_regular"
-            android:text="Please confirm your country code"
+            android:text="@string/confirm_prompt"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/modecotrial_regular"
-            android:text="and enter your phone number"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp" />
+
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp">
+
             <EditText
                 android:id="@+id/gc-countryCode"
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:background="@drawable/radius_white"
-                android:padding="8dp"
                 android:fontFamily="@font/modecotrial_regular"
-                android:textSize="18sp"
-                android:text="+639"
                 android:inputType="number"
-                android:textColorHint="#808080" />
+                android:padding="8dp"
+                android:text="+639"
+                android:textColorHint="#808080"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/gc-number"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
                 android:layout_marginLeft="5dp"
+                android:layout_weight="0"
                 android:background="@drawable/radius_white"
-                android:padding="8dp"
                 android:fontFamily="@font/modecotrial_regular"
-                android:textSize="18sp"
                 android:inputType="textPassword"
-                android:textColorHint="#808080" />
+                android:padding="8dp"
+                android:textColorHint="#808080"
+                android:textSize="18sp" />
         </GridLayout>
 
         <!--this should lead to the Customization page-->
@@ -82,23 +78,16 @@
             android:fontFamily="@font/modecotrial_regular"
             android:text="Login" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/modecotrial_regular"
-            android:text="By signing up, you agree to our"
-            android:textColor="@color/goldLeaf"
-            android:textSize="18sp" />
-
         <!--this should lead to the Terms and Conditions page-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
             android:fontFamily="@font/modecotrial_bold"
-            android:text="Terms and Conditions"
+            android:text="@string/t_and_c"
+            android:textAlignment="center"
             android:textColor="@color/goldLeaf"
             android:textIsSelectable="true"
             android:textSize="18sp" />

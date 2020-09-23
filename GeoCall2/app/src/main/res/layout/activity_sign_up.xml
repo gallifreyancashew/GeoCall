@@ -12,18 +12,34 @@
         android:layout_height="match_parent"
         android:layout_margin="20dp"
         android:orientation="vertical"
-        android:layout_gravity="center"
-        >
+        android:layout_gravity="center" >
 
+        <!--GEOCALL LOGO-->
         <ImageView
-            android:layout_width="323dp"
+            android:layout_width="300dp"
             android:layout_height="129dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:src="@drawable/geocall_embossedtxt" />
 
+        <!--NAME TEXT BOX-->
         <EditText
             android:id="@+id/gc-FullName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@drawable/radius_white"
+            android:padding="8dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:textSize="15dp"
+            android:hint="Full name"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/hintGray" />
+
+        <!--EMAIL TEXT BOX-->
+        <EditText
+            android:id="@+id/gc-EmailAddress"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -32,129 +48,107 @@
             android:background="@drawable/radius_white"
             android:padding="8dp"
             android:fontFamily="@font/modecotrial_regular"
-            android:textSize="18sp"
-            android:hint="Full name"
-            android:inputType="textPersonName"
-            android:textColorHint="#808080" />
-
-        <EditText
-            android:id="@+id/gc-EmailAddress"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0"
-            android:background="@drawable/radius_white"
-            android:padding="8dp"
-            android:fontFamily="@font/modecotrial_regular"
-            android:textSize="18sp"
+            android:textSize="15dp"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
-            android:textColorHint="#808080" />
+            android:textColorHint="@color/hintGray" />
 
-        <GridLayout
+        <!--BIRTHDATE -->
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/modecotrial_regular"
-                android:text="Birthdate: "
-                android:textColor="#808080"
-                android:textIsSelectable="true"
-                android:textSize="18dp" />
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/modecotrial_regular"
+            android:text="Birthdate: "
+            android:textColor="@color/goldLeaf"
+            android:textIsSelectable="true"
+            android:textSize="18dp" />
 
-            <!--idk what i'm doing here, send help-->
-            <!--Spinner
-                android:id="@+id/monthSpin"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="#FFFFFF"/-->
+        <DatePicker
+            android:id="@+id/birthdatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:datePickerMode="spinner"
+            android:background="@drawable/radius_white"
+            android:calendarTextColor="@color/goldLeaf"
+            android:maxDate="Sep 23 2020"
+            android:calendarViewShown="false"/>
 
-        </GridLayout>
-
+        <!--PASSWORD TEXT BOX-->
         <EditText
             android:id="@+id/gc-Password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="0"
             android:background="@drawable/radius_white"
             android:padding="8dp"
             android:fontFamily="@font/modecotrial_regular"
-            android:textSize="18sp"
+            android:textSize="15dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="#808080" />
+            android:textColorHint="@color/hintGray"/>
 
-
+        <!--CONTINUE BUTTON : should go to CUSTOMIZATION PAGE when triggered-->
         <Button
             android:id="@+id/button"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/radius_gold"
             android:fontFamily="@font/modecotrial_regular"
             android:text="Continue" />
 
+        <!--should redirect to LOGIN PAGE when triggered-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/modecotrial_regular"
             android:text="I already have an account"
             android:textColor="@color/goldLeaf"
             android:textIsSelectable="true"
-            android:textSize="15sp" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/modecotrial_bold"
             android:text="or sign up with"
             android:textColor="@color/goldLeaf"
             android:textSize="18sp" />
 
+        <!--SIGN IN options with FACEBOOK, GOOGLE, and WHATSAPP-->
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp">
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/facebook"
                 android:clickable="true"/>
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/google"
                 android:clickable="true"/>
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/whatsapp"
                 android:clickable="true"/>
         </GridLayout>
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </LinearLayout>
