@@ -14,8 +14,7 @@
         android:layout_height="98dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:src="@drawable/geocall_embossedtxt">
-    </>
+        android:src="@drawable/geocall_embossedtxt"/>
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="520dp">
@@ -26,9 +25,8 @@
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
             android:fontFamily="@font/modecotrial_regular"
-            android:textColor="#FFFFFF">
-        </>
-    </>
+            android:textColor="#FFFFFF"/>
+    </ScrollView>
     <Button
         android:id="@+id/button"
         android:layout_width="250dp"

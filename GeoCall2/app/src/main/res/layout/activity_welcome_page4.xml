@@ -34,7 +34,7 @@
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="247dp"
-                app:srcCompat="@drawable/geographically_based" />
+                app:srcCompat="@drawable/shake_to_activate" />
 
             <TextView
                 android:id="@+id/title"
@@ -43,7 +43,7 @@
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:fontFamily="@font/modecotrial_bold"
-                android:text="Geographically-based"
+                android:text="Shake to Activate"
                 android:textAlignment="center"
                 android:textColor="@color/goldLeaf"
                 android:textSize="24sp" />
@@ -56,7 +56,7 @@
                 android:layout_marginTop="24sp"
                 android:layout_marginRight="20sp"
                 android:fontFamily="@font/modecotrial_regular"
-                android:text="Based on your location, GeoCall can look through the database for the nearest appropriate hotline services which you can choose from.\n\nYou also set the application to automatically call the nearest station instead in Settings."
+                android:text="In the event of emergencies, GeoCall can be set to be activated through shaking the phone. Upon activation, GeoCall lists the numbers of nearby stations in a numerical order from which you can choose from."
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />

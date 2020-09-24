@@ -54,7 +54,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="15dp"
                 android:fontFamily="@font/modecotrial_regular"/>
-        </>
+        </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,5 +76,5 @@
             android:background="@drawable/radius_gold"
             android:fontFamily="@font/modecotrial_regular"
             android:text="I'm ready" />
-    </>
+    </LinearLayout>
 </LinearLayout>
