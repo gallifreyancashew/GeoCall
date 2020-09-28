@@ -15,6 +15,7 @@
         <activity android:name=".PhonePage" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".WelcomePages">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

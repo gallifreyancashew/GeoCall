@@ -32,7 +32,8 @@
         to these Terms of Use prior to you using the Application.</string>
 
     <string name="agree"><b>I Agree</b> to the \nTerms and Conditions</string>
-    <string name="defaultDesc"><b>DEFAULT</b>\nuses GeoCall\'s default 0-9 arrangement for emergency numbers</string>
+    <string name="defaultDesc"><b>DEFAULT</b>\nuses GeoCall\'s default 0–9 arrangement for emergency numbers</string>
     <string name="advDesc"><b>ADVANCED</b>\ncustomize your priority emergency numbers and even add your own emergency contact</string>
+    <string name="onboarding_image">onboarding image 1</string>
 
 </resources>
