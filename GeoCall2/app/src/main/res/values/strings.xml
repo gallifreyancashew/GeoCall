@@ -35,5 +35,18 @@
     <string name="defaultDesc"><b>DEFAULT</b>\nuses GeoCall\'s default 0–9 arrangement for emergency numbers</string>
     <string name="advDesc"><b>ADVANCED</b>\ncustomize your priority emergency numbers and even add your own emergency contact</string>
     <string name="onboarding_image">onboarding image 1</string>
+    <string name="crime">CRIME</string>
+    <string name="police">POLICE</string>
+    <string name="fire">FIRE</string>
+    <string name="natural_disaster">NATURAL DISASTER</string>
+    <string name="todo">TODO</string>
+    <string name="welcome_back_user">Welcome back, User!</string>
+    <string name="select_your_emergency">SELECT YOUR EMERGENCY</string>
+    <string name="medical">MEDICAL</string>
+    <string name="pregnancy">PREGNANCY</string>
+    <string name="direction">DIRECTION</string>
+    <string name="your_current_location">YOUR CURRENT LOCATION</string>
+    <string name="suicide">suicide</string>
+    <string name="child_abuse">CHILD\nABUSE</string>
 
 </resources>
