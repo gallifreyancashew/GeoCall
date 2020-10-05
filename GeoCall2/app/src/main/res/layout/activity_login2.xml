@@ -74,12 +74,13 @@
             android:fontFamily="@font/modecotrial_regular"
             android:text="Login" />
 
-        <TextView
-            android:id="@+id/new_user"
+        <Button
+            android:id="@+id/btn_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
+            android:background="#00FFFFFF"
             android:fontFamily="@font/modecotrial_regular"
             android:text="@string/NewUser"
             android:textColor="@color/goldLeaf"

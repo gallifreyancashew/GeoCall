@@ -69,7 +69,7 @@
 
         <!--this should lead to the Customization page-->
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_phonepage_continue"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -79,11 +79,13 @@
             android:text="Login" />
 
         <!--this should lead to the Terms and Conditions page-->
-        <TextView
+        <Button
+            android:id="@+id/btn_termsandconditions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:background="#00FFFFFF"
             android:clickable="true"
             android:fontFamily="@font/modecotrial_bold"
             android:text="@string/t_and_c"

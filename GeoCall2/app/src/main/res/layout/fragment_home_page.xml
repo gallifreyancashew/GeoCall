@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4003DAC5"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    tools:context=".HomePageFragment">
+
+    <ImageButton
+        android:id="@+id/btn_dialnearest"
+        android:layout_width="90dp"
+        android:layout_height="71dp"
+        android:background="@drawable/phone_red"
+        android:contentDescription="@string/dial_nearest_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txv_dialnearest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/modecotrial_bold"
+        android:text="@string/press_to_dial"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dialnearest" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_placesList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_dialnearest"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

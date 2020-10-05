@@ -28,7 +28,7 @@
             android:textColor="#FFFFFF"/>
     </ScrollView>
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_phonepage_continue"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

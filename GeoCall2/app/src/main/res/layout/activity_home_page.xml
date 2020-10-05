@@ -5,22 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_3"
+    android:background="@drawable/bg_1"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <!--SPLASH SCREEN
-      swipe in any direction to head to the LOGIN PAGE-->
+    tools:context=".HomePage">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/geocall_embossed" />
@@ -35,32 +31,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
+        <ImageButton
+            android:id="@+id/btn_homepage_menu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/hamburger"
+            android:contentDescription="@string/homepage_menu_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
             android:fontFamily="@font/modecotrial_bold"
-            android:gravity="right|center_vertical"
+            android:gravity="end|center_vertical"
             android:text="@string/welcome_back_user"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="16dp"
-            android:layout_height="21dp"
-            android:layout_marginTop="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.004"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/hamburger" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -68,7 +59,7 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/modecotrial_bold"
         android:text="@string/select_your_emergency"
         android:textAlignment="center"
@@ -80,30 +71,36 @@
 
     <GridLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="297dp"
-        android:layout_height="226dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#4003DAC5"
         android:columnCount="3"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
         android:rowCount="3"
-        app:layout_constraintBottom_toTopOf="@+id/txv_frag_homepage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <!--MEDICAL-->
         <Button
             android:id="@+id/btn_medical"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="0"
-            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="12dp"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/medical_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/medical"
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
@@ -111,60 +108,71 @@
         <!--FIRE-->
         <Button
             android:id="@+id/btn_fire"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="0"
-            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/fire_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/fire"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
         <!--POLICE-->
         <Button
             android:id="@+id/btn_police"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="0"
-            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/police_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/police"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
         <!--CRIME-->
         <Button
             android:id="@+id/btn_crime"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="1"
-            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="12dp"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/crime_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/crime"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
         <!--NATURAL DISASTER-->
         <Button
             android:id="@+id/btn_naturaldisaster"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="1"
-            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/naturaldisaster_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/natural_disaster"
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
@@ -172,66 +180,75 @@
         <!--SUICIDE-->
         <Button
             android:id="@+id/btn_suicide"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="1"
-            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:contentDescription="@string/suicide"
             android:drawableTop="@drawable/suicide_small"
             android:fontFamily="@font/modecotrial_bold"
-            android:text="SUICIDE"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
-
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/suicide"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
         <!--CHILD ABUSE-->
         <Button
             android:id="@+id/btn_childabuse"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="2"
-            android:layout_column="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="12dp"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/child_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/child_abuse"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
         <!--PREGNANCY-->
-
-        <!--DIRECTION-->
         <Button
             android:id="@+id/btn_pregnancy"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="2"
-            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/pregnancy_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/pregnancy"
             android:textColor="#FFFFFF"
             android:textSize="12sp" />
 
+        <!--DIRECTION-->
         <Button
             android:id="@+id/btn_direction"
-            android:layout_width="90dp"
-            android:layout_height="70dp"
-            android:layout_row="2"
-            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:drawableTop="@drawable/directions_small"
             android:fontFamily="@font/modecotrial_bold"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/direction"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
 
     </GridLayout>
 
@@ -239,38 +256,30 @@
         android:id="@+id/txv_frag_homepage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/modecotrial_bold"
-        android:text="@string/your_current_location"
+        android:text="@string/frag_homepage"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-
-    <!--fragment
-        android:id="@+id/frag_homepage"
-        android:layout_width="272dp"
-        android:layout_height="224dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txv_frag_homepage"
-        app:layout_constraintVertical_bias="0.308" /-->
-
-    <!--not sure what the fragment is for but i replaced it with the mapview instead-->
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="281dp"
-        android:layout_height="254dp"
+    <FrameLayout
+        android:id="@+id/fl_frag_homepage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txv_frag_homepage"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout="@layout/fragment_home_page" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

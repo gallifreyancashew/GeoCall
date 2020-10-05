@@ -1,8 +1,14 @@
 package com.example.geocall
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import androidx.core.view.isVisible
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
+import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import kotlinx.android.synthetic.main.activity_welcome_pages.*
 import me.relex.circleindicator.CircleIndicator3
 
@@ -11,6 +17,8 @@ class WelcomePages : AppCompatActivity() {
     private var titlesList = mutableListOf<String>()
     private var detailsList = mutableListOf<String>()
     private var imagesList = mutableListOf<Int>()
+    private var btnGotIt : Button ?= null
+    private var indicator : CircleIndicator3 ?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +27,26 @@ class WelcomePages : AppCompatActivity() {
         postToList()
 
         view_pager2.adapter = ViewPagerAdapter(titlesList, detailsList, imagesList)
+        btnGotIt = findViewById<Button>(R.id.btn_gotit)
 
-        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
-        indicator.setViewPager(view_pager2)
+        indicator = findViewById<CircleIndicator3>(R.id.indicator)
+        this.indicator?.setViewPager(view_pager2)
+
+        setCurrentOnboardingIndicator(0)
+
+        view_pager2.registerOnPageChangeCallback(object: OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                setCurrentOnboardingIndicator(position)
+            }
+        })
+
+        val gotIt = findViewById<Button>(R.id.btn_gotit)
+        gotIt.setOnClickListener{
+            val intent = Intent(this, HomePage::class.java)
+            //val msg = intent.putExtra("name", username.text.toString())
+            startActivity(intent)
+        }
     }
 
     private fun addToList(title: String, details: String, image:Int) {
@@ -46,5 +71,13 @@ class WelcomePages : AppCompatActivity() {
             "In the event of emergencies, GeoCall can be set to be activated through shaking the phone. Upon activation," +
                     " GeoCall lists the numbers of nearby stations in a numerical order from which you can choose from.",
             R.drawable.shake_to_activate)
+    }
+
+    private fun setCurrentOnboardingIndicator(index: Int) {
+        if (index == view_pager2.adapter?.itemCount?.minus(1)) {
+            btnGotIt?.visibility = View.VISIBLE
+        } else {
+            btnGotIt?.visibility = View.INVISIBLE
+        }
     }
 }
