@@ -10,8 +10,8 @@ class PhonePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_page)
 
-        val login = findViewById<Button>(R.id.btn_phonepage_continue)
-        login.setOnClickListener{
+        val btn_login = findViewById<Button>(R.id.phonepage_btn_login)
+        btn_login.setOnClickListener{
             val intent = Intent(this, CustomizationPage::class.java)
             //val msg = intent.putExtra("name", username.text.toString())
             startActivity(intent)
