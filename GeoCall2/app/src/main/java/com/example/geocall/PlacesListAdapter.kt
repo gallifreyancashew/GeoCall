@@ -1,8 +1,11 @@
 package com.example.geocall
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_places.view.*
 
@@ -27,6 +30,10 @@ class PlacesListAdapter (
             //txv_distance.text = placesList[position].distance.toString() + "km away"
             txv_distance.text = placesList[position].contact.toString()
             txv_rating.text = "Rating: " + placesList[position].rating.toString() + "/5"
+            btn_dial.setOnClickListener {
+                val intentCall = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + placesList[position].contact.toString()))
+                context.startActivity(intentCall)
+            }
         }
     }
 

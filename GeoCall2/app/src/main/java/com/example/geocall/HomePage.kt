@@ -1,7 +1,11 @@
 package com.example.geocall
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home_page.*
@@ -11,6 +15,7 @@ class HomePage : AppCompatActivity() {
 
     val fragHomepage = HomePageFragment()
     val fragHomepageMap = HomePageMapFragment()
+    private lateinit var btn_dialNearest: ImageButton
 
     var placesList = mutableListOf(
         PlacesListItem("HOSPITAL", "Baguio General Hospital and Medical Center", "(074) 661 7910", 16.401073, 120.595993, 3.5),
@@ -26,6 +31,7 @@ class HomePage : AppCompatActivity() {
             replace(R.id.fl_frag_homepage, fragHomepageMap)
             commit()
         }
+
         txv_frag_homepage.text = "YOUR CURRENT LOCATION"
 
         btn_medical.setOnClickListener {
@@ -117,5 +123,11 @@ class HomePage : AppCompatActivity() {
         rv_placesList.layoutManager = LinearLayoutManager(this)
 
         txv_frag_homepage.text = "NEARBY CONTACTS"
+
+        btn_dialNearest = findViewById<ImageButton>(R.id.btn_dialnearest)
+        btn_dialNearest.setOnClickListener{
+            val intentCall = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + placesList[0].contact.toString()))
+            startActivity(intentCall)
+        }
     }
 }
