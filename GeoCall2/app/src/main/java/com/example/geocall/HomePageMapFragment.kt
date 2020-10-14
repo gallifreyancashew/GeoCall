@@ -156,9 +156,9 @@ class HomePageMapFragment : Fragment(R.layout.fragment_home_page_map), OnMapRead
 
     override fun onConnected(p0: Bundle?) {
         locationRequest = LocationRequest()
-        locationRequest.setInterval(1100)
-        locationRequest.setFastestInterval(1100)
-        locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY)
+        locationRequest.interval = 1100
+        locationRequest.fastestInterval = 1100
+        locationRequest.priority = LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY
 
         if (ContextCompat.checkSelfPermission(activity!!.applicationContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this)

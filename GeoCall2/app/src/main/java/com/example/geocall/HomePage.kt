@@ -29,6 +29,7 @@ class HomePage : AppCompatActivity() {
             replace(R.id.fl_frag_homepage, fragHomepageMap)
             commit()
         }
+        txv_frag_homepage.text = "YOUR CURRENT LOCATION"
 
         btn_medical.setOnClickListener {
             openDialList()
@@ -69,5 +70,7 @@ class HomePage : AppCompatActivity() {
         val adapter = PlacesListAdapter(placesList)
         rv_placesList.adapter = adapter
         rv_placesList.layoutManager = LinearLayoutManager(this)
+
+        txv_frag_homepage.text = "NEARBY CONTACTS"
     }
 }
