@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/modecotrial_bold"
             android:gravity="end|center_vertical"
-            android:text="@string/welcome_back_user"
+            android:text="Your emergency partner"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

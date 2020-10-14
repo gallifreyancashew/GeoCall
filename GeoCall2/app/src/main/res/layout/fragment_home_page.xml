@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/modecotrial_bold"
-        android:text="@string/press_to_dial"
+        android:text="Press to dial nearest contact to you"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="14sp"

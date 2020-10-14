@@ -24,7 +24,8 @@ class PlacesListAdapter (
     override fun onBindViewHolder(holder: PlacesListViewHolder, position: Int) {
         holder.itemView.apply {
             txv_name.text = placesList[position].name
-            txv_distance.text = placesList[position].distance.toString() + "km away"
+            //txv_distance.text = placesList[position].distance.toString() + "km away"
+            txv_distance.text = placesList[position].contact.toString()
             txv_rating.text = "Rating: " + placesList[position].rating.toString() + "/5"
         }
     }
