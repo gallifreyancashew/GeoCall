@@ -24,7 +24,7 @@
 
         <!--NAME TEXT BOX-->
         <EditText
-            android:id="@+id/gc-FullName"
+            android:id="@+id/signup_edt_fullname"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -39,7 +39,7 @@
 
         <!--EMAIL TEXT BOX-->
         <EditText
-            android:id="@+id/gc-EmailAddress"
+            android:id="@+id/signup_edt_email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -79,7 +79,7 @@
 
         <!--PASSWORD TEXT BOX-->
         <EditText
-            android:id="@+id/gc-Password"
+            android:id="@+id/signup_edt_password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -95,7 +95,7 @@
 
         <!--CONTINUE BUTTON : should go to CUSTOMIZATION PAGE when triggered-->
         <Button
-            android:id="@+id/btn_phonepage_continue"
+            android:id="@+id/signup_btn_continue"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

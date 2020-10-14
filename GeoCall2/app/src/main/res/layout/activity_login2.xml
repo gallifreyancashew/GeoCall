@@ -22,7 +22,7 @@
             android:src="@drawable/geocall_embossedtxt" />
 
         <EditText
-            android:id="@+id/gc-Username"
+            android:id="@+id/login_edt_email"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -37,7 +37,7 @@
             android:textColorHint="#808080" />
 
         <EditText
-            android:id="@+id/gc-Password"
+            android:id="@+id/login_edt_password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -65,7 +65,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/login_button"
+            android:id="@+id/login_btn_login"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
